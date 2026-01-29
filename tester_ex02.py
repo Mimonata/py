@@ -1,22 +1,26 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ex01.py                                            :+:      :+:    :+:    #
+#    tester_ex02.py                                     :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/24 13:57:34 by spitul            #+#    #+#              #
-#    Updated: 2026/01/28 20:46:53 by spitul           ###   ########.fr        #
+#    Created: 2026/01/29 06:47:08 by spitul            #+#    #+#              #
+#    Updated: 2026/01/29 06:48:22 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-import time
-from datetime import date
+from ex02 import all_thing_is_obj
 
-now = time.time()
+ft_list = ["Hello", "tata!"]
+ft_tuple = ("Hello", "toto!")
+ft_set = {"Hello", "tutu!"}
+ft_dict = {"Hello" : "titi!"}
 
-print(f"Seconds since January 1, 1970: {now:,.4f} or {now:.2e} \
-in scientific notation")
-
-now = date.today()
-print(now.strftime("%b %d %Y"))
+all_thing_is_obj(ft_list)
+all_thing_is_obj(ft_tuple)
+all_thing_is_obj(ft_set)
+all_thing_is_obj(ft_dict)
+all_thing_is_obj("Brian")
+all_thing_is_obj("Toto")
+print(all_thing_is_obj(10))
