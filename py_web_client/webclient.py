@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/30 07:38:54 by spitul            #+#    #+#              #
-#    Updated: 2026/02/04 07:18:13 by spitul           ###   ########.fr        #
+#    Updated: 2026/02/12 19:12:38 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,11 +39,11 @@ def	send_http_request(url, port) -> str:
 def	webclient(sys.argv) -> str:
 
 	input = sys.argv.split(" ")
-	if (len(input) == 3)
+	if (len(input) == 3):
 		port = atoi(input[2])
-	elif (len(input) == 2)
+	elif (len(input) == 2):
 		port = 80
-	else
+	else:
 		print("Wrong input")
 	url = input[1]
 	
