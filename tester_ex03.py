@@ -1,31 +1,25 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    cash.py                                            :+:      :+:    :+:    #
+#    tester_ex03.py                                     :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/02/13 08:08:50 by spitul            #+#    #+#              #
-#    Updated: 2026/02/13 08:32:55 by spitul           ###   ########.fr        #
+#    Created: 2026/05/20 20:16:05 by spitul            #+#    #+#              #
+#    Updated: 2026/05/20 20:47:51 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-c = int(input("Cash: "))
-s = 0
-if c > 0:
-	while True:
-		if c > 25:
-			s += c // 25
-			c = c % 25
-		if c > 10:
-			s += c // 10
-			c = c % 10
-		if c > 5:
-			s += c // 5
-			c = c % 5
-		if c > 1:
-			s += c // 1
-			c = c % 1
-		if c == 0:
-			break
-	print(s)	
+from ex03 import NULL_not_found
+
+Nothing = None
+Garlic = float("NaN")
+Zero = 0
+Empty = ""
+Fake = False
+NULL_not_found(Nothing)
+NULL_not_found(Garlic)
+NULL_not_found(Zero)
+NULL_not_found(Empty)
+NULL_not_found(Fake)
+print(NULL_not_found("Brian"))

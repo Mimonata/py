@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/30 07:38:54 by spitul            #+#    #+#              #
-#    Updated: 2026/02/13 08:48:20 by spitul           ###   ########.fr        #
+#    Updated: 2026/02/14 08:08:07 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ def	receive_response(sock):
 def	send_http_request(url, port) -> str:
 
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	sock.connect(url.hostname, port)
-	request = f"GET {url.path} HTTP/1.1\r\nHost: {url.hostname}\r\nConnection: close\r\n\r\n"
+	sock.connect((url.hostname, port))
+	request = f"GET {url.path or '/'} HTTP/1.1\r\nHost: {url.hostname}\r\nConnection: close\r\n\r\n"
 	sock.sendall(request.encode())
 	response = receive_response(sock)
 	sock.close()
@@ -51,3 +51,6 @@ def	webclient() -> str:
 	parsed = urlparse(url)
 	response = send_http_request(parsed, port)
 	print(response)
+
+if __name__ == "__main__":
+	webclient()
