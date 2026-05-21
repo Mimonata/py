@@ -6,12 +6,11 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/20 21:10:39 by spitul            #+#    #+#              #
-#    Updated: 2026/05/21 07:10:23 by spitul           ###   ########.fr        #
+#    Updated: 2026/05/21 07:17:40 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
-from typing import Any
 
 def whatis():
 	assert len(sys.argv) <= 2, "more than one argument provided"
@@ -22,7 +21,7 @@ def whatis():
 			print("I'm odd")
 		else:
 			print("I'm even")
-	
+
 	# side quest
 	txt = "The best things in life are free!"
 	print("free" in txt)
@@ -34,4 +33,3 @@ if __name__ == "__main__":
 	except AssertionError as e:
 		print(e)
 		sys.exit(1)
-	
