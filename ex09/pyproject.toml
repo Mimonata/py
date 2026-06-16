@@ -2,10 +2,10 @@
 name = "ft_package"
 version = "0.0.1"
 description = "A sample test package"
-license = "MIT"
+license = {text = "MIT"}
 
 [project.urls]
-git-repo = "https://github.com/mimonata"
+Homepage = "https://github.com/mimonata"
 
 [[project.authors]] 
 name = "spitul"

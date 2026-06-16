@@ -3,7 +3,7 @@ Name: ft_package
 Version: 0.0.1
 Summary: A sample test package
 Author-email: spitul <spitul@42.fr>
-License-Expression: MIT
-Project-URL: git-repo, https://github.com/mimonata
+License: MIT
+Project-URL: Homepage, https://github.com/mimonata
 License-File: LICENSE
 Dynamic: license-file
