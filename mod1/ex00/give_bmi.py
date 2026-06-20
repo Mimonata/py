@@ -6,11 +6,12 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/19 06:19:07 by spitul            #+#    #+#              #
-#    Updated: 2026/06/19 06:51:06 by spitul           ###   ########.fr        #
+#    Updated: 2026/06/19 21:32:20 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import numpy as np
+
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
 	assert len(height) == len(weight), "Weight and height list have different lengths"
 	for x in height:
