@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/22 22:05:09 by spitul            #+#    #+#              #
-#    Updated: 2026/06/24 22:02:43 by spitul           ###   ########.fr        #
+#    Updated: 2026/06/25 20:24:16 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ def zoom():
 	zoomed = arr[200:600, 200:600, 0:1]
 	plt.imshow(zoomed, cmap="gray")
 	plt.savefig("output.jpg")
+	print(f"New shape after slicing {zoomed.shape}")
+	print(zoomed)
 	
 if __name__ == "__main__":
 	zoom()
