@@ -6,12 +6,16 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/29 07:33:09 by spitul            #+#    #+#              #
-#    Updated: 2026/07/01 21:35:16 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/02 07:50:41 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy as np
+
+from load_image import ft_load
 # # np.uint8(255) + 1
 # a = np.array([100,200,30])
 # b = 255 - a
@@ -27,8 +31,13 @@ def ft_invert(array) -> np.ndarray:
 	return inverted
 
 
-# def ft_red(array) -> array:
-
+def ft_red(array) -> np.ndarray:
+	"""The ft_red function displays and returns the red channel of the image"""
+	reddend = array * [1, 0, 0]
+	plt.imshow(reddend)
+	plt.show()
+	print(reddend)
+	return reddend
 
 # def ft_green(array) -> array:
 
@@ -38,3 +47,7 @@ def ft_invert(array) -> np.ndarray:
 
 # def ft_grey(array) -> array:
 
+if __name__ == "__main__":
+	array = ft_load("test_img.jpg")
+	ft_invert(array)
+	ft_red(array)

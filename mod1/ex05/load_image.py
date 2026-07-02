@@ -6,14 +6,14 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/20 08:46:36 by spitul            #+#    #+#              #
-#    Updated: 2026/06/22 22:00:14 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/02 07:24:31 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 from PIL import Image
 import numpy as np
 
-def ft_load(path: str) -> list:
+def ft_load(path: str) -> np.ndarray:
 	# if not path.endswith(".jpg") and not path.endswith(".jpeg"):
 	# 	raise ValueError("File not the right format")
 	try:
