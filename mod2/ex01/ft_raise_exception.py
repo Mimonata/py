@@ -6,17 +6,17 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/03 22:45:11 by spitul            #+#    #+#              #
-#    Updated: 2026/07/03 22:53:00 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/03 23:01:13 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 def input_temperature(data: str) -> int:
 	rez = int(data)
 	if (rez < 0):
-		raise ValueError(f"{data} is too cold for plants")
+		raise ValueError(f"{data}°C is too cold for plants (min 0°C)")
 	elif (rez > 40):
-		raise ValueError(f"{data} is too hot for plants")
-	print(f"Temperature is now {data}°\n")
+		raise ValueError(f"{data}°C is too hot for plants (max 40°C)")
+	print(f"Temperature is now {data}°C\n")
 	return rez
 
 def test_temperature() -> None:
@@ -42,6 +42,7 @@ def test_temperature() -> None:
 		print(f"Caught input_temperature error: {e}\n")
 	
 if __name__ == "__main__":
-	print("\n=== Garden Temperature ===\n")
+	print("\n=== Garden Temperature Checker ===\n")
 	test_temperature()
+	print("All tests completed - program didn't crash!")
 		
