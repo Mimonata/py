@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/04 22:48:44 by spitul            #+#    #+#              #
-#    Updated: 2026/07/05 22:04:18 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/05 22:06:17 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,11 @@ class WaterError(GardenError):
 	def __init__(self, message="Unknown water error"):
 		super().__init__(message)
 
-def WaterTester(quantity: float) -> None:
+def WaterTester(water: float) -> None:
 	if (water < 0.8):
 		raise WaterError("Not enough water in the tank!")
 
-def	PlantTester(state: str) -> None:
+def	PlantTester(plant: str) -> None:
 	if (plant != "green"):
 		raise PlantError("The tomato plant is wilting")
 
@@ -44,15 +44,11 @@ if __name__ == "__main__":
 		print("Caught PlantError:", e)
 	print("\nTesting catching all garden errors...")
 	try:
-		water = 0.1
-		if (water < 0.8):
-			raise WaterError("Not enough water in the tank!")
+		WaterTester(0.1)
 	except GardenError as e:
 		print("Caught GardenError:", e)
 	try:
-		plant = "yellow"	
-		if (plant != "green"):
-			raise PlantError("The tomato plant is wilting")
+		PlantTester("yellow")
 	except GardenError as e:
 		print("Caught GardenError:", e)
 		
