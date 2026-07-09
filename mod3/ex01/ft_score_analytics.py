@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/08 22:37:59 by spitul            #+#    #+#              #
-#    Updated: 2026/07/09 22:36:07 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/09 22:41:29 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,10 @@ def score_parser() -> None:
 		try:
 			lst.append(int(x))
 		except Exception:
-			print(f"{DUSTY_PINK}Invalid parameter: '{x}'{RESET}")
+			print(f"{WARM_GREY}Invalid parameter: '{x}'{RESET}")
+	if (len(lst) == 0):
+		print(f"{MUTED_GREEN}No scores provided. Usage: python3 ft_score_analytics.py <score1> <score2> ...{RESET}")
+		return
 	for x in lst:
 		sum += x
 	print(f"Scores processed: {lst}")
