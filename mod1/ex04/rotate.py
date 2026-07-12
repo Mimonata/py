@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/25 20:27:44 by spitul            #+#    #+#              #
-#    Updated: 2026/06/26 22:10:15 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/01 21:06:40 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ def	rotate():
 	plt.savefig("output.jpg")
 	print(f"New shape after transpose: {transposed.shape}")
 	print(transposed)
+	print(f"Type of the array {transposed.dtype}")
 	
 if __name__ == "__main__":
 	rotate()
