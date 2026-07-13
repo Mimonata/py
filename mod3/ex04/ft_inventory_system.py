@@ -6,14 +6,14 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/11 08:22:08 by spitul            #+#    #+#              #
-#    Updated: 2026/07/13 21:42:03 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/13 21:44:38 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
 
 def parse_inventory() -> None:
-	if len(sys.argv == 1):
+	if len(sys.argv) == 1:
 		print("No inventory provided")
 		return
 	inventory = {}
@@ -29,7 +29,7 @@ def parse_inventory() -> None:
 			print(f"Quantity error for '{parts[0]}': {e}")
 		if parts[0] in inventory:
 			print(f"Redundant item '{parts[0]}' - discarding")
-		inventory[parts[0]] = parts[1]
+		inventory[parts[0]] = amount
 	
 	print(f"Got inventory: {inventory}")
 	print(f"Item list: {list(inventory.keys())}")
@@ -50,7 +50,7 @@ def parse_inventory() -> None:
 	dict.update({"new_inventory_bucket": 10})
 	print(f"Updated inventory: {inventory}")
 
-	if __name__ == "__main__":
-		parse_inventory()
-		return 0
+if __name__ == "__main__":
+	parse_inventory()
+	exit(0)
 	
