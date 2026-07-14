@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/11 08:22:08 by spitul            #+#    #+#              #
-#    Updated: 2026/07/13 21:44:38 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/14 18:23:38 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,17 +37,19 @@ def parse_inventory() -> None:
 	print(f"Total quantity of the {len(inventory)} items is: {summe}")
 	for item, qty in inventory.items():
 		percentage = round(qty / summe * 100, 2)
-		print(f"Item {inventory[item]} represents {percentage}%")
+		print(f"Item {item} represents {percentage}%")
 	min = float('inf')
-	max = 0
+	max = -1
 	for item, qty in inventory.items():
 		if qty < min:
 			min_item = item
-		elif qty > max:
+			min = qty
+		if qty > max:
 			max_item = item
+			max = qty
 	print(f"Item most abundant: {max} with quantity {max_item}")
 	print(f"Item least abundant: {min} with quantity {min_item}")
-	dict.update({"new_inventory_bucket": 10})
+	inventory.update({"new_inventory_bucket": 10})
 	print(f"Updated inventory: {inventory}")
 
 if __name__ == "__main__":
