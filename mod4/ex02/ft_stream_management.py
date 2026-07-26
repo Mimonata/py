@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/25 21:27:54 by spitul            #+#    #+#              #
-#    Updated: 2026/07/26 09:10:01 by spitul           ###   ########.fr        #
+#    Updated: 2026/07/26 09:13:15 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ def transform_data(text: str) -> None:
 			file.close()
 		except Exception as e:
 			sys.stderr.write(f"[STDERR] Error opening file '{outfile}': {e}\n")
-			sys.stdout.write("Data not saved.")
+			sys.stdout.write("Data not saved.\n")
 	
 if __name__ == "__main__":
 	text = extract_file()
